@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dikr Counter</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: #f3f4f6;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .counter {
+      font-size: 4rem;
+      font-weight: bold;
+      margin: 20px 0;
+      color: #10b981;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .count-btn {
+      background-color: #10b981;
+      color: white;
+    }
+
+    .count-btn:hover {
+      background-color: #059669;
+    }
+
+    .reset-btn {
+      background-color: #ef4444;
+      color: white;
+    }
+
+    .reset-btn:hover {
+      background-color: #dc2626;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dikr Counter</h1>
+  <div class="counter" id="count">0</div>
+  <div class="buttons">
+    <button class="count-btn" onclick="increment()">Count</button>
+    <button class="reset-btn" onclick="reset()">Reset</button>
+  </div>
+
+  <script>
+    let count = 0;
+
+    function increment() {
+      count++;
+      document.getElementById("count").innerText = count;
+    }
+
+    function reset() {
+      count = 0;
+      document.getElementById("count").innerText = count;
+    }
+  </script>
+</body>
+</html>
